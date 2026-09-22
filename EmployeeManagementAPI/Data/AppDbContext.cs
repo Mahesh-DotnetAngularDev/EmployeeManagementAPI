@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementApi.Models;
+using EmployeeManagementAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementAPI.Data
@@ -12,6 +13,7 @@ namespace EmployeeManagementAPI.Data
 
 
         public DbSet<Employee> Employees => Set<Employee>();
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
